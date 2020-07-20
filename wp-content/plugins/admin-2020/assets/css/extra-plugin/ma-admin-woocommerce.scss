@@ -1,0 +1,199 @@
+/*------------------------------------------------------------------
+[Woocommerce STYLES]
+
+Project:      Admin 2020
+Description:  Loaded if woocommerce is installed
+
+[Table of contents]
+
+
+1.  Variables
+2.  General
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+1.  Variables
+-------------------------------------------------------------------*/
+//DARK BACKGROUNDS
+$darkestblack: #111;
+$darkblack: #222;
+$midblack: #333; //LIGHT BACKGROUNDS
+$white: #fff;
+$lightgrey: #f8f8f8; ///LINKS
+$primarylink: #1e87f0;
+$successlink: #32d296;
+$dangerlink: #f0506e;
+$warninglink: #faa05a;
+$bordercolor: rgba(197, 197, 197, 0.2);
+/*------------------------------------------------------------------
+2.  General
+-------------------------------------------------------------------*/
+#woocommerce-embedded-root {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+.woo-nav-tab-wrapper {
+  width: 100%;
+}
+
+.woocommerce-page {
+  .wp-heading-inline {
+    margin-bottom: 0 !important;
+  }
+
+  .page-title-action {
+    position: relative;
+    float: right;
+    top: -45px;
+    left: 0;
+    right: 0;
+    margin-right: 5px;
+  }
+}
+
+.woocommerce-page {
+  .tablenav.bottom {
+    display: block;
+  }
+}
+
+.woocommerce-layout {
+  h1,
+  h2,
+  h3 {
+    color: $darkestblack !important;
+  }
+
+  a {
+    color: $primarylink !important;
+  }
+
+  button {
+    line-height: inherit !important;
+  }
+  position: relative;
+  float: left;
+  width: 100%;
+
+  .woocommerce-layout__header {
+    position: absolute;
+    left: 0;
+    right: 0;
+    max-width: 100%;
+    overflow: hidden;
+    top: 0;
+    border-radius: 4px;
+    border-color: $bordercolor;
+    box-shadow: none !important;
+    z-index: 1;
+  }
+
+  .woocommerce-layout__activity-panel {
+    float: left;
+    position: relative;
+  }
+
+  .woocommerce-layout__primary {
+    margin-left: 0;
+    margin-top: 100px;
+  }
+
+  .woocommerce-layout__main {
+    padding-right: 0 !important;
+    width: 100%;
+  }
+}
+
+.woocommerce-page {
+  #poststuff {
+    *:not(.button):not(input):not(textarea):not(select) {
+      border-color: $bordercolor;
+    }
+  }
+
+  .meta-box-sortables {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  #woocommerce-coupon-data {
+    width: 100%;
+  }
+
+  #woocommerce-product-data {
+    width: 100%;
+  }
+
+  .meta-box-sortables {
+    .postbox {
+      width: 100% !important;
+    }
+  }
+}
+
+.woocommerce-embed-page .notice {
+  padding: 15px 30px !important;
+}
+
+.ma-admin-dark {
+  .woocommerce-layout .components-button.is-button.is-default:not(.is-primary) {
+    background: $darkblack;
+  }
+
+  .woocommerce-layout {
+    * {
+      color: #999 !important;
+    }
+
+    a,
+    h1,
+    h2,
+    h3 {
+      color: #fff !important;
+    }
+
+    .woocommerce-layout__header {
+      background: $darkblack;
+
+      * {
+        background: $darkblack;
+      }
+    }
+
+    .woocommerce-card {
+      background: $darkblack;
+    }
+
+    .woocommerce-card__body {
+      border-top: 1px solid $bordercolor !important;
+    }
+  }
+
+  #woocommerce-coupon-data .panel-wrap,
+  #woocommerce-product-data .panel-wrap {
+    background: $darkblack;
+  }
+}
+
+.ma-admin-dark.woocommerce-page {
+  #poststuff {
+    *:not(.button):not(input):not(textarea):not(select) {
+      color: #999;
+      border-color: $bordercolor;
+    }
+  }
+
+  .product_data_tabs {
+    background: none !important;
+  }
+
+  .product_data_tabs li a {
+    background: $darkblack;
+  }
+
+  .product_data_tabs li.active a {
+    background: $midblack!important;
+  }
+}

@@ -1,0 +1,36 @@
+/*------------------------------------------------------------------
+1.  Variables
+-------------------------------------------------------------------*/
+//DARK BACKGROUNDS
+$darkestblack: #111;
+$darkblack: #222;
+$midblack: #333; //LIGHT BACKGROUNDS
+$white: #fff;
+$lightgrey: #f8f8f8; ///LINKS
+$primarylink: #1e87f0;
+$successlink: #32d296;
+$dangerlink: #f0506e;
+$warninglink: #faa05a; ///TEXT
+$bodytext: rgba(255,255,255,.5); ///BORDERS
+$bordercolor: rgba(197, 197, 197, 0.2);
+/*------------------------------------------------------------------
+2.  DARK MODES
+-------------------------------------------------------------------*/
+.ma-admin-dark {
+  .et-tb-layout-placeholder__title {
+    color: #999 !important;
+  }
+
+  #et_load_category_page,
+  .et-pb-portability-button {
+    background: $midblack !important;
+  }
+}
+
+.toplevel_page_divi-engine img {
+  float: left;
+  position: relative;
+  top: 0;
+  transform: none;
+  left: 0;
+}

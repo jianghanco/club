@@ -1,0 +1,45 @@
+/*------------------------------------------------------------------
+1.  Variables
+-------------------------------------------------------------------*/
+//DARK BACKGROUNDS
+$darkestblack: #111;
+$darkblack: #222;
+$midblack: #333; //LIGHT BACKGROUNDS
+$white: #fff;
+$lightgrey: #f8f8f8; ///LINKS
+$primarylink: #1e87f0;
+$successlink: #32d296;
+$dangerlink: #f0506e;
+$warninglink: #faa05a; ///TEXT
+$bodytext: rgba(255,255,255,.5); ///BORDERS
+$bordercolor: rgba(197, 197, 197, 0.2);
+/*------------------------------------------------------------------
+2.  DARK
+-------------------------------------------------------------------*/
+.ma-admin-dark {
+  .ai1wm-holder {
+    background: $darkblack;
+    border: none !important;
+  }
+
+  .ai1wm-segment {
+    background: $darkblack !important;
+    border: none !important;
+  }
+
+  .ai1wm-feedback-types > li > a,
+  .ai1wm-feedback-types > li > label > span {
+    text-decoration: none !important;
+    color: #fff !important;
+    font-size: 14px;
+    font-weight: 100 !important;
+  }
+
+  .ai1wm-drag-drop-area {
+    background: $darkblack !important;
+  }
+
+  .ai1wm-modal-container {
+    background: $darkblack !important;
+  }
+}

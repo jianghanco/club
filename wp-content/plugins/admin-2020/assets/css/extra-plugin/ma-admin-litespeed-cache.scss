@@ -1,0 +1,74 @@
+/*------------------------------------------------------------------
+1.  Variables
+-------------------------------------------------------------------*/
+//DARK BACKGROUNDS
+$darkestblack: #111;
+$darkblack: #222;
+$midblack: #333; //LIGHT BACKGROUNDS
+$white: #fff;
+$lightgrey: #f8f8f8; ///LINKS
+$primarylink: #1e87f0;
+$successlink: #32d296;
+$dangerlink: #f0506e;
+$warninglink: #faa05a; ///TEXT
+$bodytext: rgba(255,255,255,.5); ///BORDERS
+$bordercolor: rgba(197, 197, 197, 0.2);
+/*------------------------------------------------------------------
+2.  GENERAL
+-------------------------------------------------------------------*/
+.litespeed-dashboard-stats-wrapper {
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+
+  .postbox {
+    box-shadow: none;
+  }
+}
+
+.litespeed-body {
+  .wp-list-table {
+    background: none;
+    padding: 0;
+    box-shadow: none;
+  }
+}
+
+.litespeed-body {
+  float: left;
+
+  .litespeed-callout {
+    float: left;
+  }
+}
+
+.ma-admin-dark {
+  .litespeed-title {
+    border-color: $bordercolor !important;
+  }
+
+  .litespeed-postbox-footer {
+    background: $darkblack !important;
+  }
+
+  .litespeed-pie_info text {
+    fill: #fff;
+  }
+
+  .litespeed-body {
+    background: $darkblack;
+    border-radius: 4px;
+    border: none;
+  }
+
+  .litespeed-callout {
+    background: $midblack !important;
+    border-top: none!important;
+    border-right: none!important;
+    border-bottom: none!important;
+  }
+
+  .litespeed-switch {
+    label {
+      color: #999;
+    }
+  }
+}

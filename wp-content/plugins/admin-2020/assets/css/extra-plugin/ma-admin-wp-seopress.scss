@@ -1,0 +1,126 @@
+/*------------------------------------------------------------------
+1.  Variables
+-------------------------------------------------------------------*/
+//DARK BACKGROUNDS
+$darkestblack: #111;
+$darkblack: #222;
+$midblack: #333; //LIGHT BACKGROUNDS
+$white: #fff;
+$lightgrey: #f8f8f8; ///LINKS
+$primarylink: #1e87f0;
+$successlink: #32d296;
+$dangerlink: #f0506e;
+$warninglink: #faa05a; ///TEXT
+$bodytext: rgba(255,255,255,.5); ///BORDERS
+$bordercolor: rgba(197, 197, 197, 0.2);
+/*------------------------------------------------------------------
+2.  GENERAL
+-------------------------------------------------------------------*/
+#seopress-admin-tabs {
+  .nav-tab {
+    border-radius: 0;
+  }
+}
+
+#seopress-tabs {
+  .nav-tab {
+    border-radius: 0;
+  }
+
+  .form-table {
+    background: none;
+    box-shadow: none;
+    padding: 0;
+  }
+}
+
+.seopress-styles {
+  #screen-meta {
+    display: none;
+  }
+
+  .seopress-option {
+    margin: 0 !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin-top: 30px !important;
+  }
+}
+
+#seopress-content {
+  margin-top: 30px;
+}
+
+.seopress-styles .wrap:not(#seopress-admin-tabs):not(#seopress-tabs) {
+  margin-top: 0;
+  height: 0;
+}
+
+body.seopress-styles {
+  background: none $lightgrey !important;
+
+  .nav-tab-wrapper {
+    margin-top: 0 !important;
+  }
+}
+/*------------------------------------------------------------------
+2.  DARK STYLES
+-------------------------------------------------------------------*/
+body.seopress-styles.ma-admin-dark {
+  background: none $darkestblack !important;
+}
+
+.ma-admin-dark.seopress-styles {
+  #seopress-notifications-center {
+    background: $darkblack;
+
+    .notice-left p {
+      color: #999 !important;
+    }
+  }
+
+  #tab_seopress_links {
+    background: $darkblack;
+  }
+
+  #seopress-admin-tabs {
+    .nav-tab {
+      background: $midblack !important;
+      color: #fff !important;
+    }
+  }
+
+  .seopress-option {
+    background: $darkblack !important;
+
+    * {
+      border-color: $bordercolor !important;
+    }
+
+    .submit {
+      background: none !important;
+    }
+
+    #seopress-tabs {
+      .nav-tab {
+        color: #999;
+      }
+
+      .nav-tab-active {
+        color: #fff;
+      }
+    }
+
+    #titles-state-default {
+      color: #fff;
+    }
+  }
+
+  .seopress-feature {
+    background: $darkblack;
+
+    .feature-state {
+      color: #fff !important;
+    }
+  }
+}

@@ -1,0 +1,87 @@
+/*------------------------------------------------------------------
+1.  Variables
+-------------------------------------------------------------------*/
+//DARK BACKGROUNDS
+$darkestblack: #111;
+$darkblack: #222;
+$midblack: #333; //LIGHT BACKGROUNDS
+$white: #fff;
+$lightgrey: #f8f8f8; ///LINKS
+$primarylink: #1e87f0;
+$successlink: #32d296;
+$dangerlink: #f0506e;
+$warninglink: #faa05a; ///TEXT
+$bodytext: rgba(255,255,255,.5); ///BORDERS
+$bordercolor: rgba(197, 197, 197, 0.2);
+/*------------------------------------------------------------------
+2.  GENERAL
+-------------------------------------------------------------------*/
+.oxygen_page_oxygen_vsb_settings {
+  text-align: left;
+}
+
+#ct_views_cpt {
+  .handlediv {
+    background: none;
+    border: none;
+    position: absolute;
+    right: 0;
+  }
+
+  .sortable-handle {
+    margin-top: 0;
+  }
+
+  h2.ui-sortable-handle {
+    margin-top: 0;
+  }
+}
+
+.post-type-ct_template {
+  a.page-title-action {
+    position: relative;
+    float: left;
+    top: 0;
+    left: 0;
+    margin-right: 5px;
+    margin-bottom: 30px;
+  }
+}
+
+.toggle-indicator:before {
+  content: "\f142";
+  display: inline-block;
+  font: normal 20px/1 dashicons;
+  speak: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-decoration: none!important;
+}
+
+#ct_builder_shortcodes {
+  width: 100%;
+}
+/*------------------------------------------------------------------
+2.  DARK MODE
+-------------------------------------------------------------------*/
+.ma-admin-dark {
+  .oxygen-admin-screen-home-section-design-set-chooser {
+    background: $midblack;
+  }
+
+  .oxygen-vsb-design-set-install-wizard-button {
+    color: #666;
+
+    &:hover {
+      color: $primarylink;
+    }
+  }
+
+  .oxygen-vsb-design-set-install-wizard-design-sets-design-set-info h2 {
+    color: #333;
+  }
+
+  .oxygen-vsb-design-set-install-wizard-design-sets-design-set-info a {
+    color: $primarylink;
+  }
+}

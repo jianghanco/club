@@ -1,0 +1,136 @@
+/*------------------------------------------------------------------
+1.  Variables
+-------------------------------------------------------------------*/
+//DARK BACKGROUNDS
+$darkestblack: #111;
+$darkblack: #222;
+$midblack: #333; //LIGHT BACKGROUNDS
+$white: #fff;
+$lightgrey: #f8f8f8; ///LINKS
+$primarylink: #1e87f0;
+$successlink: #32d296;
+$dangerlink: #f0506e;
+$warninglink: #faa05a; ///TEXT
+$bodytext: rgba(255,255,255,.5); ///BORDERS
+$bordercolor: rgba(197, 197, 197, 0.2);
+/*------------------------------------------------------------------
+2.  GENERAL
+-------------------------------------------------------------------*/
+.rank-math-ui {
+  float: left;
+  margin-bottom: 30px;
+}
+
+.rank-math-box-help {
+  float: left;
+  width: 100%;
+}
+
+.rank-math-box {
+  float: left;
+  width: 100%;
+}
+
+.rank-math-wrap {
+  .cmb2-form {
+    float: left;
+    width: 100%;
+  }
+
+  form {
+    .form-table {
+      padding: 0;
+      border: 0;
+      box-shadow: none;
+    }
+  }
+}
+
+.ma-admin-dark.rank-math-page {
+  background: $darkestblack;
+
+  .rank-math-list-icon li strong,
+  h1 {
+    color: #fff;
+  }
+
+  .rank-math-box {
+    background: $darkblack;
+  }
+
+  .col {
+    form {
+      background: $darkblack;
+    }
+  }
+
+  .cmb2-form {
+    background: $darkblack;
+  }
+
+  .status {
+    background: $midblack !important;
+    border: none !important;
+  }
+
+  .rank-math-box header {
+    border-color: $bordercolor !important;
+  }
+
+  .nav-tab-wrapper {
+    a {
+      color: #999;
+    }
+  }
+
+  .rank-math-tabs-navigation:not(.rank-math-custom) a {
+    background: $darkblack;
+    border: none;
+  }
+
+  .rank-math-tabs-content {
+    background: $darkblack;
+  }
+
+  .cmb-row {
+    border-color: $bordercolor;
+
+    .cmb-th label {
+      color: #fff;
+    }
+  }
+
+  .rank-math-ui.settings-footer {
+    background: $darkblack;
+    border-color: $bordercolor;
+  }
+
+  .rank-math-search-options .search-field input {
+    border-color: $bordercolor;
+    height: 40px;
+  }
+
+  input:focus {
+    background: $midblack;
+  }
+
+  .rank-math-console-db-info {
+    background: $midblack;
+  }
+
+  .rank-math-seo-analysis-header {
+    background: $darkblack;
+  }
+}
+
+.ma-admin-dark.rank-math_page_rank-math-role-manager {
+  .cmb-form {
+    background: none;
+    border-color: $bordercolor;
+  }
+
+  .cmb-big-labels .cmb2-checkbox-list li label {
+    background: $midblack;
+    border-color: $bordercolor;
+  }
+}

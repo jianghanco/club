@@ -1,0 +1,33 @@
+/*------------------------------------------------------------------
+1.  Variables
+-------------------------------------------------------------------*/
+//DARK BACKGROUNDS
+$darkestblack: #111;
+$darkblack: #222;
+$midblack: #333; //LIGHT BACKGROUNDS
+$white: #fff;
+$lightgrey: #f8f8f8; ///LINKS
+$primarylink: #1e87f0;
+$successlink: #32d296;
+$dangerlink: #f0506e;
+$warninglink: #faa05a;
+$bordercolor: rgba(197, 197, 197, 0.2);
+/*------------------------------------------------------------------
+2.  General
+-------------------------------------------------------------------*/
+.wpse-full-screen #wpcontent {
+  left: 0;
+  width: 100%;
+  padding: 30px !important;
+}
+
+.wpse-full-screen-notice-content notice-on {
+  width: 300px;
+}
+
+.vg-header-toolbar-inner {
+  position: relative;
+  float: left;
+  width: 100%;
+  margin-bottom: 15px;
+}
