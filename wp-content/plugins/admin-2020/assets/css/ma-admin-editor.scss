@@ -1,0 +1,324 @@
+/*------------------------------------------------------------------
+[BLOCK EDITOR STYLES]
+
+Project:      Admin 2020
+Description:  Styles applied to the wp block editor;
+
+[Table of contents]
+
+1.  Variables
+2.  Block Editor
+3.  Dark Mode
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+1.  Variables
+-------------------------------------------------------------------*/
+//DARK BACKGROUNDS
+$darkestblack: #111;
+$darkblack: #222;
+$midblack: #333; //LIGHT BACKGROUNDS
+$white: #fff;
+$lightgrey: #f8f8f8; ///LINKS
+$primarylink: #1e87f0;
+$successlink: #32d296;
+$dangerlink: #f0506e;
+$warninglink: #faa05a; ///TEXT
+$bodytext: rgba(255,255,255,.5); ///BORDERS
+$bordercolor: rgba(197, 197, 197, 0.2);
+/*------------------------------------------------------------------
+2.  Block Editor
+-------------------------------------------------------------------*/
+.edit-post-fullscreen-mode-close {
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: 80% !important;
+  background-color: #fff !important;
+}
+
+.edit-post-fullscreen-mode-close:hover {
+  background-color: #fff !important;
+}
+
+.edit-post-fullscreen-mode-close svg {
+  display: none !important;
+}
+
+.edit-post-fullscreen-mode-close.has-icon:hover {
+  background: #fff !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: 80% !important;
+}
+
+.edit-post-layout__metaboxes:not(:empty) {
+  border-color: $bordercolor;
+}
+
+.components-menu-item__info {
+  line-height: initial;
+  margin-top: 0;
+}
+
+.block-editor-editor-skeleton__sidebar {
+  border-left: 1px solid $bordercolor !important;
+}
+
+.block-editor__container {
+  .block-editor-editor-skeleton__header {
+    border-color: $bordercolor;
+  }
+
+  .components-button {
+    font-weight: normal;
+  }
+
+  .components-panel__header.edit-post-sidebar-header {
+    ul {
+      margin-bottom: 0;
+    }
+  }
+
+  .components-panel {
+    border: none;
+  }
+
+  .components-panel__header {
+    border-top: 0;
+    border-color: $bordercolor;
+  }
+
+  .components-panel__body {
+    border-color: $bordercolor;
+  }
+
+  .editor-post-featured-image__toggle:hover {
+    border-color: $primarylink;
+  }
+
+  .block-editor-editor-skeleton__footer {
+    border-color: $bordercolor;
+  }
+
+  .block-editor-inserter__menu-help-panel {
+    border-color: $bordercolor;
+  }
+
+  .components-dropdown-menu__menu .components-menu-group {
+    border-color: $bordercolor;
+  }
+}
+
+.block-editor-editor-skeleton {
+  width: 80% !important;
+  left: 20% !important;
+  top: 81px !important;
+}
+
+.editor-post-publish-panel {
+  padding-top: 60px;
+}
+
+.block-editor-editor-skeleton__content {
+  background: #fff;
+}
+/*------------------------------------------------------------------
+3.  Dark Mode
+-------------------------------------------------------------------*/
+.ma-admin-dark {
+  .components-modal__content {
+    background: $darkblack;
+    border-color: $bordercolor;
+  }
+
+  .block-editor__container {
+    .components-drop-zone__provider {
+      background: $darkblack;
+    }
+
+    .edit-post-header,
+    .edit-post-sidebar {
+      background: $darkblack;
+    }
+
+    .edit-post-header .components-button {
+      color: rgba(255,255,255,.5);
+      background: none;
+    }
+
+    .components-dropdown-menu .components-button {
+      color: #666;
+    }
+
+    .block-editor-editor-skeleton__header {
+      border: none;
+    }
+
+    .components-button:not(.components-toolbar__control):not(.block-editor-block-switcher__toggle):not(.components-dropdown-menu__toggle) {
+      color: $lightgrey;
+      font-weight: normal;
+    }
+
+    .components-button:not(:disabled):not([aria-disabled=true]):not(.is-secondary):not(.components-toolbar__control):not(.is-primary):not(.is-tertiary):not(.is-link):hover {
+      background: none;
+      color: $lightgrey;
+      border: none;
+      box-shadow: none;
+    }
+
+    button.is-secondary {
+      background-color: $darkblack !important;
+      color: $bodytext !important;
+      border: 1px solid $bordercolor !important;
+    }
+
+    button.is-primary {
+      background: $primarylink !important;
+      color: $bodytext !important;
+    }
+
+    .components-panel__header.edit-post-sidebar-header {
+      background: none;
+
+      ul {
+        margin-bottom: 0;
+      }
+    }
+
+    .components-panel {
+      background: none;
+      border: none;
+    }
+
+    .edit-post-sidebar {
+      color: $bodytext;
+    }
+
+    .components-panel__header {
+      border-top: 0;
+      border-color: $bordercolor;
+    }
+
+    .components-panel__body {
+      border-color: $bordercolor;
+    }
+
+    .components-panel__body-title {
+      background: none !important;
+    }
+
+    .components-panel__body-title:active,
+    .components-panel__body-title:focus,
+    .components-panel__body-title:hover,
+    .components-panel__body-title:visited {
+      background: $darkestblack !important;
+    }
+
+    .editor-post-featured-image__toggle {
+      background: none;
+    }
+
+    .editor-post-featured-image__toggle:hover {
+      border-color: $primarylink;
+    }
+
+    .components-form-token-field__input-container,
+    .edit-post-layout__footer {
+      background: none;
+    }
+
+    .block-editor-editor-skeleton__footer {
+      background: $darkblack;
+      border-color: $bordercolor;
+    }
+
+    .components-panel__body-toggle.components-button .components-panel__arrow {
+      color: $bodytext;
+    }
+
+    .block-editor-block-inspector__no-blocks {
+      background: none;
+    }
+
+    .components-dropdown-menu__menu,
+    .components-popover__content {
+      background: $midblack;
+      border: none;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      border-radius: 4px;
+    }
+
+    .block-editor-inserter__menu-help-panel {
+      border-color: $bordercolor;
+    }
+
+    .block-editor-block-types-list__item:hover::before {
+      background: none !important;
+    }
+
+    button.components-button.components-menu-item__button {
+      background: none !important;
+    }
+
+    .components-dropdown-menu__menu .components-menu-group {
+      border-color: $bordercolor;
+    }
+  }
+
+  .edit-post-fullscreen-mode-close {
+    background-color: #222222 !important;
+
+    &:hover {
+      background-color: $midblack !important;
+    }
+  }
+
+  .components-modal__header {
+    background: $darkblack;
+  }
+
+  .components-modal__frame {
+    border: none !important;
+
+    * {
+      border-color: $bordercolor !important;
+    }
+
+    .edit-post-manage-blocks-modal__category-title {
+      background: $darkblack;
+    }
+
+    .components-button:hover {
+      background: $midblack !important;
+      color: $primarylink !important;
+      border: none !important;
+      border-color: $bordercolor !important;
+    }
+  }
+
+  .components-button:not(:disabled):not([aria-disabled=true]).editor-post-last-revision__title:hover {
+    background: $darkestblack !important;
+  }
+
+  .components-panel__body-toggle.components-button:hover {
+    background: $midblack !important;
+  }
+
+  .components-panel__body-toggle.components-button:focus:not(:disabled):not([aria-disabled=true]) {
+    background: $darkestblack !important;
+    outline: none;
+  }
+
+  .block-editor-editor-skeleton__sidebar {
+    border-top: 1px solid $midblack;
+    border-left: 1px solid $midblack !important;
+  }
+
+  .edit-post-layout__metaboxes {
+    background: $darkestblack;
+  }
+
+  .components-form-token-field__input,
+  .components-textarea-control__input {
+    color: #fff !important;
+  }
+}

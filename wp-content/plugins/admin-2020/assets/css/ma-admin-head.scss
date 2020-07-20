@@ -1,0 +1,591 @@
+/*------------------------------------------------------------------
+[HEADER STYLES]
+
+Project:      Admin 2020
+Description:  All styles applied within body, html, admin bar, offcanvas views and master search
+
+[Table of contents]
+
+
+1.  Variables
+2.  Body
+3.  Links
+4.  General
+5.  Site Logo and User Image
+6.  Animation
+7.  Search
+8.  Screen Options
+9.  Auth Check / Modal LOGIN
+10. Dark Mode Modifier
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+1.  Variables
+-------------------------------------------------------------------*/
+//DARK BACKGROUNDS
+$darkestblack: #111;
+$darkblack: #222;
+$midblack: #333; //LIGHT BACKGROUNDS
+$white: #fff;
+$lightgrey: #f8f8f8; ///LINKS
+$primarylink: #1e87f0;
+$successlink: #32d296;
+$dangerlink: #f0506e;
+$warninglink: #faa05a;
+$bordercolor: rgba(197, 197, 197, 0.2);
+/*------------------------------------------------------------------
+2.  BODY
+-------------------------------------------------------------------*/
+html {
+  margin-top: 0 !important;
+  background-color: #f8f8f8;
+}
+
+body {
+  background-color: #f8f8f8;
+  max-width: 100%;
+  position: relative;
+  float: left;
+  width: 100%;
+  top: -32px;
+  height: auto;
+}
+
+body * {
+  font-family: 'Sen', sans-serif;
+  box-sizing: border-box;
+}
+/*------------------------------------------------------------------
+3.  LINKS
+-------------------------------------------------------------------*/
+.uk-link,
+a {
+  color: $primarylink;
+}
+
+.wp-toolbar body {
+  top: 0;
+}
+
+html.wp-toolbar {
+  padding-top: 0;
+}
+
+.row-title,
+.uk-link {
+  position: relative;
+
+  &::after {
+    content: ' ';
+    height: 2px;
+    width: 0;
+    transition: all 0.4s ease-in-out;
+    background: #1e87f0;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+  }
+
+  &:hover {
+    text-decoration: none;
+
+    &::after {
+      width: 100%;
+      color: #0f6ecd;
+    }
+  }
+}
+/*------------------------------------------------------------------
+4.  GENERAL
+-------------------------------------------------------------------*/
+.admin2020_quick_actions {
+  #wp-admin-bar-comments,
+  #wp-admin-bar-menu-toggle,
+  #wp-admin-bar-my-sites,
+  #wp-admin-bar-new-content,
+  #wp-admin-bar-site-name,
+  #wp-admin-bar-top-secondary,
+  #wp-admin-bar-updates,
+  #wp-admin-bar-wp-logo {
+    display: none !important;
+    visibility: hidden !important;
+  }
+
+  .ab-sub-wrapper {
+    padding-left: 30px;
+    padding-top: 15px;
+
+    &:hover {
+      .ab-sub-wrapper {
+        max-height: 1000px !important;
+      }
+    }
+
+    .ab-sub-wrapper {
+      max-height: 0 !important;
+      overflow: hidden;
+      transition: all 0.4s ease-in-out;
+    }
+  }
+
+  .ab-top-menu > .menupop {
+    width: 100%;
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    color: #333;
+
+    a {
+      color: #999;
+
+      &:hover {
+        color: $primarylink;
+      }
+    }
+  }
+
+  .ab-top-menu > .menupop:last-child {
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .ab-submenu {
+    margin-bottom: 15px;
+  }
+
+  .menupop:hover {
+    .ab-sub-wrapper {
+      display: block;
+    }
+  }
+}
+
+.ma-admin-dark {
+  .ab-top-menu > .menupop {
+    color: #fff;
+  }
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+#wpcontent {
+  animation: fadeIn ease 1s;
+}
+
+#wpwrap {
+  position: relative;
+  max-width: 100%;
+  float: left;
+  width: 100%;
+}
+
+#contextual-help-wrap,
+#screen-meta-links,
+#wpfooter,
+.count-0,
+.favorites-form,
+.filter-drawer,
+.hide-if-js,
+.toggle-row,
+.wp-header-end {
+  display: none;
+}
+
+.ma-admin-visible {
+  display: block;
+}
+
+.ma-admin-bar {
+  width: 100%;
+  top: 0;
+  border-bottom: 1px solid rgba(197, 197, 197, 0.2);
+}
+
+.admin2020loaderwrap {
+  width: 100%;
+  position: absolute;
+  height: 4px;
+  overflow: hidden;
+  bottom: 0;
+
+  .admin2020loader {
+    width: 100%;
+    height: 100%;
+    background: #bcf4ff;
+  }
+}
+
+.admin2020loader::after {
+  background: blue;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  content: " ";
+  border-radius: 4px;
+  animation-name: loadinngbar;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  background: #1e86f0;
+  border-radius: 5px;
+}
+@keyframes loadinngbar {
+  0% {
+    width: 0;
+  }
+
+  50% {
+    width: 100%;
+  }
+
+  100% {
+    width: 100%;
+    transform: translateX(100%);
+  }
+}
+
+.update-php {
+  #wpadminbar {
+    display: none;
+  }
+}
+/*------------------------------------------------------------------
+5.  SITE LOGO AND USER IMG
+-------------------------------------------------------------------*/
+.ma-admin-site-logo {
+  img {
+    max-height: 40px;
+  }
+
+  .dark {
+    display: none !important;
+  }
+}
+
+.ma-admin-dark {
+  .ma-admin-site-logo {
+    .light {
+      display: none !important;
+    }
+
+    .dark {
+      display: block !important;
+    }
+  }
+}
+
+.ma-admin-profile-img {
+  padding-right: 0;
+
+  img {
+    height: 30px;
+    border-radius: 50%;
+  }
+}
+
+.ma-admin-backend-logo-holder {
+  margin-right: 30px;
+  padding: 15px;
+  border-radius: 4px;
+  border: 1px solid $bordercolor;
+  float: left;
+  cursor: pointer;
+}
+
+.ma-admin-backend-logo {
+  width: 100px;
+  min-width: 100px;
+  min-height: 40px;
+}
+/*------------------------------------------------------------------
+6.  ANIMATION
+-------------------------------------------------------------------*/
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+/*------------------------------------------------------------------
+7.  SEARCH
+-------------------------------------------------------------------*/
+.ma-admin-search-results {
+  position: absolute;
+  right: 0;
+  left: 20%;
+  top: 81px;
+  height: 100%;
+  z-index: 9;
+}
+
+.ma-admin-menu-shrink {
+  .ma-admin-search-results {
+    left: 111px;
+  }
+}
+
+.post-attributes-help-text {
+  display: none;
+}
+
+.ma-admin-search-result {
+  border-radius: 4px;
+  float: left;
+  width: 100%;
+  padding-bottom: 30px;
+}
+/*------------------------------------------------------------------
+8.  SCREEN OPTIONS
+-------------------------------------------------------------------*/
+#screen-options-wrap {
+  border-bottom: 1px solid rgba(197, 197, 197, 0.2);
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+}
+
+#screen-options-wrap fieldset {
+  padding: 0;
+}
+/*------------------------------------------------------------------
+9.  AUTH CHECK / LOGIN MODAL
+-------------------------------------------------------------------*/
+#wp-auth-check-wrap {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 99999;
+}
+
+#wp-auth-check {
+  border-radius: 4px;
+  position: absolute !important;
+  top: 50% !important;
+  transform: translateY(-50%);
+  max-height: 2000px !important;
+}
+
+.blog,
+.home,
+.page,
+.single {
+  .admin2020loaderwrap {
+    display: none !important;
+  }
+}
+
+.admin2020_quick_actions {
+  #wp-admin-bar-root-default {
+    > li {
+      padding: 15px 15px 0;
+    }
+  }
+}
+/*------------------------------------------------------------------
+10. DARK MODE MODIFIER
+-------------------------------------------------------------------*/
+.ma-admin-dark {
+  background: $darkestblack;
+
+  .ma-admin-search-results {
+    background: $darkestblack;
+  }
+
+  .ma-admin-bar {
+    background: $darkblack;
+  }
+
+  .admin2020loaderwrap {
+    .admin2020loader {
+      width: 100%;
+      height: 100%;
+      background: $darkestblack;
+    }
+  }
+
+  .admin2020loader::after {
+    background: #1e86f0;
+    border-radius: 5px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: $darkestblack;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar {
+    background-color: $darkestblack;
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: $midblack;
+  }
+}
+
+.ma-admin-dark::-webkit-scrollbar-track {
+  background-color: $darkestblack;
+  border-radius: 4px;
+}
+
+.ma-admin-dark::-webkit-scrollbar {
+  background-color: $darkestblack;
+  width: 10px;
+}
+
+.ma-admin-dark::-webkit-scrollbar-thumb {
+  background-color: $midblack;
+}
+
+#wpadminbar {
+  background: #fff;
+  border-bottom: 1px solid $bordercolor;
+  color: #999;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 15px;
+  position: fixed;
+  top: 81px;
+  left: 20%;
+  right: 0;
+  width: auto;
+  z-index: 998;
+
+  .admin2020_front_logo {
+    max-height: 100%;
+    min-height: 100%;
+  }
+
+  #wp-admin-bar-menu-toggle,
+  #wp-admin-bar-my-account,
+  #wp-admin-bar-site-name,
+  #wp-admin-bar-updates,
+  #wp-admin-bar-wp-logo {
+    display: none;
+  }
+
+  #wp-admin-bar-root-default,
+  #wp-admin-bar-top-secondary {
+    #wp-admin-bar-wp-logo {
+      display: none;
+    }
+
+    li .ab-item {
+      color: #999;
+      background-color: #fff !important;
+
+      &:before {
+        color: #999;
+      }
+
+      :before {
+        color: #999;
+      }
+
+      &:hover {
+        color: $primarylink;
+        background: none;
+
+        &:before {
+          color: $primarylink;
+        }
+
+        :before {
+          color: $primarylink;
+        }
+      }
+
+      .ab-label {
+        color: #999;
+      }
+    }
+  }
+
+  .ab-sub-wrapper {
+    top: 40px;
+    background: #fff !important;
+    border-radius: 4px;
+    padding: 15px;
+    box-shadow: 0 5px 12px rgba(0,0,0,0.15);
+    left: 4px;
+
+    .ab-submenu {
+      background: none !important;
+    }
+
+    .ab-sub-secondary {
+      background: none !important;
+      border-top: 1px solid $bordercolor;
+      border-bottom: 1px solid $bordercolor;
+    }
+  }
+}
+
+.ma-admin-menu-shrink {
+  #wpadminbar {
+    left: 111px;
+  }
+}
+
+.ma-admin-dark {
+  #wpadminbar {
+    background: $darkblack;
+
+    #wp-admin-bar-root-default,
+    #wp-admin-bar-top-secondary {
+      li .ab-item {
+        color: #999;
+        background-color: $darkblack !important;
+
+        &:before {
+          color: #999;
+        }
+
+        :before {
+          color: #999;
+        }
+
+        &:hover {
+          color: $primarylink;
+          background: none;
+
+          &:before {
+            color: $primarylink;
+          }
+
+          :before {
+            color: $primarylink;
+          }
+        }
+
+        .ab-label {
+          color: #999;
+        }
+      }
+    }
+
+    .ab-sub-wrapper {
+      top: 40px;
+      background: $darkblack !important;
+      border-radius: 4px;
+      padding: 15px;
+      box-shadow: 0 5px 12px rgba(0,0,0,0.15);
+      left: 4px;
+
+      .ab-sub-secondary {
+        background: none !important;
+        border-top: 1px solid $bordercolor;
+        border-bottom: 1px solid $bordercolor;
+      }
+    }
+  }
+}
